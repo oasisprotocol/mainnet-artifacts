@@ -48,36 +48,35 @@ Artifacts for and leading up to the Oasis Mainnet.
 Obtain PGP keys of the current maintainers and import them into your keyring.
 
 To verify the genesis file signatures, download a release's `genesis.json` and
-the corresponding `genesis.json.asc` file and run:
+the corresponding `genesis.json.<SIGNER>.asc` files and run:
 
 ```bash
-gpg --verify genesis.json.asc
+for f in genesis.json.*.asc; do gpg --verify $f genesis.json; done
 ```
 
 If the output is similar to:
 
 ```text
-gpg: assuming signed data in 'genesis.json'
-gpg: Signature made Wed 18 Nov 2020 01:24:31 PM CET
+gpg: Signature made Mon 11 Apr 2022 10:55:04 AM CEST
 gpg:                using RSA key E91ED01D68E7470A25B7439B14E26E7833B95334
-gpg: Good signature from "Jernej Kos <jernej@kos.mx>"
+gpg: Good signature from "Jernej Kos <jernej@kos.mx>" [unknown]
+gpg:                 aka "Jernej Kos <kostko@irnas.eu>" [unknown]
 gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.
 Primary key fingerprint: D411 CB23 1098 FE0C FD51  F5E2 D2C5 CA66 EBF3 2285
      Subkey fingerprint: E91E D01D 68E7 470A 25B7  439B 14E2 6E78 33B9 5334
-gpg: Signature made Wed 18 Nov 2020 01:13:39 PM CET
-gpg:                using RSA key 7A6A1F3B1121EC798BF35BA975D14FC60FDD148F
-gpg: Good signature from "Peter Us <ptrusr@gmail.com>"
+gpg: Signature made Mon 11 Apr 2022 11:32:33 AM CEST
+gpg:                using RSA key D6EAA0C3AD3F59934656B734A870DCACB5F33080
+gpg: Good signature from "Peter <peter@u-s.si>" [unknown]
 gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.
-Primary key fingerprint: 7A6A 1F3B 1121 EC79 8BF3  5BA9 75D1 4FC6 0FDD 148F
-gpg: Signature made Wed 18 Nov 2020 12:00:49 PM CET
+Primary key fingerprint: 69F9 5042 868C 3CB0 DCA5  5855 8BCC EE2C 3A33 191C
+     Subkey fingerprint: D6EA A0C3 AD3F 5993 4656  B734 A870 DCAC B5F3 3080
+gpg: Signature made Mon 11 Apr 2022 11:02:03 AM CEST
 gpg:                using RSA key DBE7D641D40E1A0C5D43FCD837B064855C101C1B
-gpg: Good signature from "Tadej Janež <tadej.j@nez.si>"
+gpg: Good signature from "Tadej Janež <tadej.j@nez.si>" [ultimate]
 Primary key fingerprint: 6DCA A76B D25A 2E11 7CBC  BE07 3C4C CAFC 8E6D EC53
      Subkey fingerprint: DBE7 D641 D40E 1A0C 5D43  FCD8 37B0 6485 5C10 1C1B
-gpg: WARNING: This key is not certified with a trusted signature!
-gpg:          There is no indication that the signature belongs to the owner.
 ```
 
 then you've successfully verified the genesis file signatures.
