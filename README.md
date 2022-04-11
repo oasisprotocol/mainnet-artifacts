@@ -18,11 +18,12 @@ Artifacts for and leading up to the Oasis Mainnet.
 - [Peter Us]:
 
     ```text
-    pub   rsa4096/0x75D14FC60FDD148F 2019-01-11 [SC]
-        Key fingerprint = 7A6A 1F3B 1121 EC79 8BF3  5BA9 75D1 4FC6 0FDD 148F
-    uid                              Peter Us <ptrusr@gmail.com>
-    sub   rsa4096/0x685CB020C82742AA 2019-01-11 [A]
-    sub   rsa4096/0x3402D101339CF3ED 2019-01-11 [E]
+    pub   rsa4096/0x8BCCEE2C3A33191C 2020-12-27 [SC]
+        Key fingerprint = 69F9 5042 868C 3CB0 DCA5 5855 8BCC EE2C 3A33 191C
+    uid                              Peter <peter@u-s.si>
+    sub   rsa4096/0xA870DCACB5F33080 2020-12-27 [S]
+    sub   rsa4096/0xFF26975916ECBFA5 2020-12-27 [A]
+    sub   rsa4096/0x62BF065D0C921DAD 2020-12-27 [E]
     ```
 
 - [Tadej Janež]:
@@ -38,7 +39,7 @@ Artifacts for and leading up to the Oasis Mainnet.
 
 [Jernej Kos]: https://keys.openpgp.org/search?q=jernej@kos.mx
 
-[Peter Us]: https://keys.openpgp.org/search?q=ptrusr@gmail.com
+[Peter Us]: https://keys.openpgp.org/search?q=peter@u-s.si
 
 [Tadej Janež]: https://keys.openpgp.org/search?q=tadej.j@nez.si
 
