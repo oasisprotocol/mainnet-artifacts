@@ -17,17 +17,12 @@ gpg --armor --output genesis.json.<SIGNER-NAME>.asc --detach-sign genesis.json
 
 replacing `<SIGNER-NAME>` with his name.
 
-The release manager should collect all the signatures and concatenate them
-together:
-
-```bash
-cat genesis.json.*.asc > genesis.json.asc
-```
+The release manager should collect all the signatures.
 
 ## Preparing a GitHub Release
 
 Create a new release and attach the new genesis file (`genesis.json`) and the
-corresponding PGP signatures (`genesis.json.asc`).
+corresponding PGP signatures (`genesis.json.<SIGNER-NAME>.asc`).
 
 [Upgrade Log]: https://docs.oasis.dev/general/run-a-node/upgrade-log
 [Handling Network Upgrades]:
